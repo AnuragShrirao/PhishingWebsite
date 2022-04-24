@@ -57,7 +57,11 @@ def featureExtraction(url):
   #converting the list to dataframe
   feature_names = ['Have_IP', 'Have_At','Redirection','https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
                           'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards']
-    
+  
+  print("The Feature extracted values of given url are")
+  print(feature_names)
+  print(features)
+
   urlclass = pd.DataFrame(legi_features,columns = feature_names)
     
   detect = loaded_model.predict(urlclass)
